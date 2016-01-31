@@ -51,14 +51,14 @@
 		requestAnimationFrame( animate );
 
 		// animations
-		start = i > 20 ? (i-20) : 0;
+		start = i > length/3 ? (i-length/3) : 0;
 		end = i > length ? length : i;
 
 		g.attr('d', Snap.path.getSubpath(path, start, end));
 
-		i++;
+		i += 2;
 
-		if(start == Math.floor(length)){
+		if(start >= Math.floor(length)){
 			i = 0;
 		}
 	}
